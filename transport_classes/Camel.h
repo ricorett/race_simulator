@@ -5,4 +5,3 @@ class Camel : public Ground_transport {
 };
 
 
-#endif //RACE_SIMULATOR_CAMEL_H
