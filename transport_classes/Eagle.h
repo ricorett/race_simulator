@@ -1,14 +1,8 @@
-//
-// Created by Lana on 01.03.2024.
-//
-
-#ifndef RACE_SIMULATOR_EAGLE_H
-#define RACE_SIMULATOR_EAGLE_H
-
-
-class Eagle {
-
+#pragma ocne
+class Eagle : public Air_trasport{
+ name = "орёл";
+ speed = 8;
+ range_reduction = 6;
 };
 
 
-#endif //RACE_SIMULATOR_EAGLE_H

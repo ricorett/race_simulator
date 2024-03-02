@@ -1,14 +1,9 @@
-//
-// Created by Lana on 01.03.2024.
-//
-
-#ifndef RACE_SIMULATOR_CENTAUR_H
-#define RACE_SIMULATOR_CENTAUR_H
-
-
-class Centaur {
-
+#pragma once
+class Centaur : public Ground_trasport {
+    name = "кентавр";
+    speed = 15;
+    move_until_rest = 8;
+    rest_time = 2;
 };
 
 
-#endif //RACE_SIMULATOR_CENTAUR_H

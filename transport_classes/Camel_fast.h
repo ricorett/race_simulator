@@ -1,14 +1,7 @@
-//
-// Created by Lana on 01.03.2024.
-//
-
-#ifndef RACE_SIMULATOR_CAMEL_FAST_H
-#define RACE_SIMULATOR_CAMEL_FAST_H
-
-
-class Camel_fast {
-
+#pragma once
+class Camel_fast : public Camel{
+    name = "верблюд-вездеход";
+    speed = 40;
+    move_until_rest = 10;
+    rest_time = 5;
 };
-
-
-#endif //RACE_SIMULATOR_CAMEL_FAST_H
