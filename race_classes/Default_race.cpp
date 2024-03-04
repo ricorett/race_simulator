@@ -1,5 +1,3 @@
-//
-// Created by Lana on 02.03.2024.
-//
-
 #include "Default_race.h"
+
+std::string Default_race::Default_race_registration();

@@ -6,7 +6,7 @@ int main(){
  std::cout << "2. Гонка для воздушного транспорта транспорта" << std::endl;
  std::cout << "3. Гонка для наземного и воздушного транспорта" << std::endl;
  std::cout << "Выберите тип гонки: ";
- int race_type;
+ int race_type = 0;
  std::cin >> race_type;
     try {
         switch (race_type) {

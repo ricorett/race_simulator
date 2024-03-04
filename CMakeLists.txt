@@ -38,5 +38,6 @@ set(HEADERS_TRANSPORT
 )
 
 
-add_library(RaceLib ${SOURCES_RACE} ${HEADERS_RACE})
-add_library(TransportLib ${SOURCES_TRANSPORT} ${HEADERS_TRANSPORT})
+add_library(RaceLib SHARED ${SOURCES_RACE} ${HEADERS_RACE})
+add_library(TransportLib SHARED ${SOURCES_TRANSPORT} ${HEADERS_TRANSPORT})
+target_link_libraries(RaceExe RaceLib TransportLib)
