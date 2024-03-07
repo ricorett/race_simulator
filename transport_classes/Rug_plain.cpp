@@ -1,6 +1,6 @@
 #include "Rug_plain.h"
 
-int Rug_plain::check_range(){
+int Rug_plain::check_range(int range){
     if (range <= 0){
         return IVALID_RANGE;
     }

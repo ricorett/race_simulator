@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-
 enum transport_errors{
     OK
     IVALID_RANGE

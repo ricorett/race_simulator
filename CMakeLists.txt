@@ -15,15 +15,8 @@ set(HEADERS_RACE
         race_classes/Ground_race.h
 )
 set(SOURCES_TRANSPORT
-        transport_classes/Air_transport.cpp
-        transport_classes/Broom.cpp
-        transport_classes/Camel.cpp
-        transport_classes/Camel_fast.cpp
-        transport_classes/Centaur.cpp
-        transport_classes/Eagle.cpp
         transport_classes/Ground_transport.cpp
         transport_classes/Rug_plain.cpp
-        transport_classes/Shoes_everygoes.cpp
 )
 set(HEADERS_TRANSPORT
         transport_classes/Air_transport.h
