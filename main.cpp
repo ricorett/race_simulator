@@ -22,13 +22,15 @@ void start_game(int race_type, int range){
     try {
         switch (race_type) {
             case 1:
-                Ground_race_registrarion();
-                break;
+                Default_race ground;
+                ground.Ground_race_registrarion(); break;
             case 2:
-                Air_race_registration();
+                Default_race air;
+                air.Air_race_registration();
                 break;
             case 3:
-                Default_race_registration();
+                Default_race default_race;
+                default_race.Default_race_registration();
                 break;
             default: throw ERROR_TYPE;
         }

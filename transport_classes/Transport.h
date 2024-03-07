@@ -1,16 +1,15 @@
 #pragma once
+#include <cstring>
 #include <iostream>
-enum transport_errors{
-    OK
-    IVALID_RANGE
-    CALC_ERROR;
-};
 
 class Transport {
 protected:
-    int speed;
-    std::string name, type;
-    double final_time;
+  int speed, range;
+  std::string name, type;
+  double final_time;
+public:
+    void set_range(int range){
+        if (range > 0)
+            *this = range;
+    }
 };
-
-
