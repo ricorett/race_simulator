@@ -2,6 +2,6 @@
 class Broom {
     name = "метла";
     speed = 20;
-    range_reduction = 1;
+    range_reduction = range % 1000;
 };
 
