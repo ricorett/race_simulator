@@ -11,6 +11,5 @@ double Ground_transport::time_calc() {
         all_rest = rest_time + second_time + (third_time * (rest_count - 2));
     }
 
-    final_time = (range/speed) + all_rest;
-    return final_time;
+    return all_rest;
 }

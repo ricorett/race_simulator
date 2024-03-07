@@ -11,7 +11,7 @@ class Transport {
 protected:
     int speed;
     std::string name, type;
-
+    double final_time;
 };
 
 

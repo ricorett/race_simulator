@@ -1,13 +1,17 @@
 #pragma once
+#include "Transport.h"
 
 class Ground_transport : public Transport{
 protected:
-    int rest_time, move_until_rest, all_rest, final_time, third_time, rest_count;
-    double second_time;
+    int rest_time = 0, move_until_rest = 0, all_rest = 0, final_time = 0, third_time = 0, rest_count = 0;
+    double second_time = 0;
     type = "Наземный";
-    int rest_count = range / move_until_rest;
+    rest_count = range / move_until_rest;
+    final_time = (range/speed) + time_calc();
 private:
     double time_calc();
 };
 
+
+//    final_time = (range/speed) + all_rest;
 

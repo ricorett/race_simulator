@@ -1,7 +1,8 @@
 #pragma once
-class Broom {
-    name = "метла";
+class Broom : public Air_transport {
+    name = "Метла";
     speed = 20;
     range_reduction = range % 1000;
+
 };
 
