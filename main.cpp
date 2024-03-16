@@ -1,11 +1,14 @@
 #include "transport_classes/Transport.h"
 #include "race_classes/Default_race.h"
 #include "main.h"
+#include "race_classes/Air_race.h"
+#include "race_classes/Ground_race.h"
 
 
 int main(){
     int race_type = 0, range = 0;
     start_game(race_type, range);
+    std::vector<int> table;
     return 0;
 }
 
@@ -22,10 +25,10 @@ void start_game(int race_type, int range){
     try {
         switch (race_type) {
             case 1:
-                Default_race ground;
-                ground.Ground_race_registrarion(); break;
+                Ground_race ground;
+                ground.Ground_race_registration(); break;
             case 2:
-                Default_race air;
+                Air_race air;
                 air.Air_race_registration();
                 break;
             case 3:
@@ -38,4 +41,9 @@ void start_game(int race_type, int range){
     catch (...){
         std::cout << "Введен неверный тип гонки.";
     }
+}
+
+
+void race_table(std::vector<int> table){
+
 }
