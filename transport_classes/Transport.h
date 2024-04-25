@@ -4,13 +4,16 @@
 
 class Transport {
 protected:
-  int speed, range;
+  int speed;
   std::string name, type;
   double final_time;
 
 public:
-  void set_range(int range) {
-    if (range > 0)
-      *this = range;
-  }
+    Transport(std::string n) : name(n) {}
+   virtual ~Transport() {}
+    std::string getType() const {
+        return type;
+    }
+
 };
+

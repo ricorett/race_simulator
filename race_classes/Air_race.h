@@ -1,6 +1,7 @@
 #pragma once
-#include "Default_race.h"
-class Air_race : public Default_race {
+#include "Race.h"
+class Air_race : public Race {
 public:
-  std::string Air_race_registration();
+    Air_race(int r) : Race(r) {};
+    void registerVehicle() override;
 };

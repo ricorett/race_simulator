@@ -1,6 +1,6 @@
-#include "transport_classes/Transport.h"
-#include "race_classes/Default_race.h"
 #include "main.h"
+#include "transport_classes/Transport.h"
+#include "race_classes/Mixed_race.h"
 #include "race_classes/Air_race.h"
 #include "race_classes/Ground_race.h"
 
@@ -8,7 +8,6 @@
 int main(){
     int race_type = 0, range = 0;
     start_game(race_type, range);
-    std::vector<int> table;
     return 0;
 }
 
@@ -23,27 +22,28 @@ void start_game(int race_type, int range){
     std::cout << "Введите расстояние гонки: ";
     std::cin >> range;
     try {
-        switch (race_type) {
-            case 1:
-                Ground_race ground;
-                ground.Ground_race_registration(); break;
-            case 2:
-                Air_race air;
-                air.Air_race_registration();
-                break;
-            case 3:
-                Default_race default_race;
-                default_race.Default_race_registration();
-                break;
-            default: throw ERROR_TYPE;
+        Mixed_race mixed_race(range);
+        Air_race air_race(range);
+        Ground_race ground_race(range);
+        if (race_type == 1) {
+            ground_race.registerVehicles();
+            ground_race.startRace();
+            ground_race.printResults();
+        } else if (race_type == 2) {
+            air_race.registerVehicles();
+            air_race.startRace();
+            air_race.printResults();
+        } else if (race_type == 3) {
+            mixed_race.registerVehicles();
+            mixed_race.startRace();
+            mixed_race.printResults();
+        } else {
+            throw "Некорректный выбор типа гонки.";
         }
     }
-    catch (...){
-        std::cout << "Введен неверный тип гонки.";
+    catch (const char* error_message){
+        std::cout << error_message << std::endl;
     }
-}
-
-
-void race_table(std::vector<int> table){
 
 }
+

@@ -6,12 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(RaceExe main.cpp)
 set(SOURCES_RACE
         race_classes/Air_race.cpp
-        race_classes/Default_race.cpp
+        race_classes/Mixed_race.cpp
         race_classes/Ground_race.cpp
 )
 set(HEADERS_RACE
         race_classes/Air_race.h
-        race_classes/Default_race.h
+        race_classes/Mixed_race.h
         race_classes/Ground_race.h
 )
 set(SOURCES_TRANSPORT
