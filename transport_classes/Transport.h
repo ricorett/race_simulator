@@ -4,7 +4,7 @@
 
 class Transport {
 protected:
-  int speed;
+  int speed, r_range;
   std::string name, type;
   double final_time;
 
@@ -14,6 +14,10 @@ public:
     std::string getType() const {
         return type;
     }
-
+    void setRange(int range)  {
+        if (range > 0){
+            r_range = range;
+        }
+    }
 };
 
